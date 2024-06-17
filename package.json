@@ -1,0 +1,22 @@
+{
+  "name": "fs",
+  "module": "index.ts",
+  "version": "1.6.9",
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir out --target node",
+    "compile": "bun build src/index.ts --compile --outfile ./bin/fs --minify --target=bun-darwin-arm64",
+    "test": "bun test",
+    "dev": "bun watch src/index.ts",
+    "major": "npm version major",
+    "minor": "npm version minor",
+    "patch": "npm version patch",
+    "format": "bun x prettier ./src -w"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
